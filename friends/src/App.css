@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #d5d6c3;
+  height: 1500px;
 }
 
 .App-logo {
@@ -41,16 +43,91 @@
   max-width: 500px;
   height: 50px;
   margin: auto;
-  margin-top: 50px;
+  padding-top: 20px;
   margin-bottom: 50px;
-  background-color: lightgrey;
+  background-color:#b8ba9c;
   border: 5px solid white;
   outline-style: solid;
-  outline-color: lightgrey;
+  outline-color: #b8ba9c;
 }
 
 a {
   margin: 20px;
   font-size: 1.5rem;
   text-decoration: none;
+  color: darkslategrey;
+  font-weight: bold;
 }
+
+.friends-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px;
+  padding-left: 50px;
+}
+
+.card {
+  margin: 20px;
+  width: 250px;
+  height: 200px;
+  background-color: ivory;
+  border: 50px solid #8f9179;
+  outline-style: solid;
+  outline-color: gainsboro;
+}
+
+h2, h3 {
+  color: darkslategray;
+  font-weight: 900;
+}
+
+.login, .add {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  padding-top: 40px;
+  background-color: ivory;
+  height: 500px;
+}
+
+.login-button {
+  height: 50px;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #7d8242;
+}
+
+.add-friend {
+  height: 50px;
+  width: 50%;
+  margin: auto;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #7d8242;
+}
+
+input {
+  height: 50px;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.username, .password {
+  margin: 20px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #7d8242;
+}
+
+
+

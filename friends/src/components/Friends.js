@@ -4,32 +4,31 @@ import Friend from './Friend.js';
 
 const Friends = () => {
     const [friends, setFriends] = useState([]);
-
-    // const getFriends = () => {
-    //     axiosAuth()
-    //         .get("/friends")
-    //         .then(res => {
-    //             return console.log(res);
-                
-    //         })
-    //         .catch(err => console.log(err));
-    // }
+    console.log("friends", friends)
 
     useEffect(() => {
-        axiosAuth()
-            .get("/friends")
-            .then(res => {
-                return console.log(res);
-            })
-            .catch(err => console.log(err));
+        getFriends();
     }, [])
+
+
+    const getFriends = () => {
+        axiosAuth().get("/friends")
+            .then(res => {
+                console.log(res);
+                setFriends(res.data)})
+            .catch(err => console.log(err));
+    }
 
     return (
         <div className="friends-list">
-           <Friend /> 
-            
-        </div>
-    )
+            {friends.map((friend, id) =>
+            <Friend key={id} 
+                    name={friend.name} 
+                    age={friend.age} 
+                    email={friend.email}/>)}  
+                   
+        </div> 
+    );
 }
 
 export default Friends; 
